@@ -1,0 +1,30 @@
+# Maven Build Output
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE Files
+.idea/
+*.iml
+.vscode/
+*.swp
+.project
+.classpath
+.settings/
+
+# Spring Boot
+*.log
+logs/
+
+# Never commit credentials
+application-prod.yml
+application-local.yml
+*.env
+.env
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini

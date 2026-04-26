@@ -1,0 +1,37 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: product-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/products_db
+    username: ${DB_USERNAME:postgres}   # ← change to your PostgreSQL username
+    password: ${DB_PASSWORD:yourpassword}  # ← change to your PostgreSQL password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update   # auto-creates/updates tables on startup
+    show-sql: true     # prints SQL in console — useful for debugging
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+# JWT config — keep the secret long (256-bit minimum for HS256)
+jwt:
+  secret: ${JWT_SECRET:5367566B59703373367639792F423F4528482B4D6251655468576D5A71347437}
+
+# Register with Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+logging:
+  level:
+    com.ecommerce: DEBUG

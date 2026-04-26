@@ -1,0 +1,73 @@
+server:
+  port: 8080   # Gateway is the ONLY port the frontend talks to
+
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+     # Automatically create routes from Eureka service names
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+      routes:
+
+           # ── USER SERVICE ──────────────────────────────────────────────────
+        - id: user-service-auth
+          uri: lb://user-service     # lb:// = load-balanced via Eureka
+          predicates:
+            - Path=/api/auth/**
+          filters:
+            - name: JwtAuthGatewayFilter
+              args:
+                secured: false      # login/register are public
+
+ # ── PRODUCT SERVICE ───────────────────────────────────────────────
+        - id: product-service-public
+          uri: lb://product-service
+          predicates:
+            - Path=/api/products/**
+            - Method=GET
+          filters:
+            - name: JwtAuthGatewayFilter
+              args:
+                secured: false      # browsing products is public
+
+        - id: product-service-admin
+          uri: lb://product-service
+          predicates:
+            - Path=/api/products/**
+            - Method=POST,PUT,DELETE
+          filters:
+            - name: JwtAuthGatewayFilter
+              args:
+                secured: true      # write ops require valid JWT
+
+        # ── ORDER SERVICE ─────────────────────────────────────────────────
+
+        - id: order-service
+          uri: lb://order-service
+          predicates:
+            - Path=/api/cart/**,/api/orders/**
+          filters:
+            - name: JwtAuthGatewayFilter
+              args:
+                secured: true      # all order endpoints require login
+
+jwt:
+  secret: ${JWT_SECRET:5367566B59703373367639792F423F4528482B4D6251655468576D5A71347437}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+logging:
+  level:
+    com.ecommerce: DEBUG
+    org.springframework.cloud.gateway: DEBUG
