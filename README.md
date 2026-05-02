@@ -14,7 +14,6 @@ Spring Boot Microservices, Spring Cloud, and React.
 ![JWT](https://img.shields.io/badge/JWT-Auth-black?style=flat-square&logo=jsonwebtokens)
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)
 
-[Live Demo](https://shopease.vercel.app) •
 [GitHub](https://github.com/Suraaj8424/shopease) •
 [API Docs](#-api-endpoints)
 
