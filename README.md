@@ -266,20 +266,50 @@ Login again to get a fresh token with ADMIN role.
 
 ## 📸 Screenshots
 
-### 🏠 Home Page
-*(Add screenshot)*
+### 🔐 Login Page
+</br>
+<img width="1919" height="913" alt="login dashboard" src="https://github.com/user-attachments/assets/9ba0981c-2195-4e0f-bfdd-9640c9ad0d7c" />
+</br>
 
-### 🛒 Cart Page
-*(Add screenshot)*
+### 📝 Register Page
+</br>
+<img width="1919" height="893" alt="login dashboard1" src="https://github.com/user-attachments/assets/9bc55596-59fb-460e-920e-4dda0b9a62ff" />
+</br>
 
-### 📦 Order History
-*(Add screenshot)*
+### 🏠 Home Page with products visible
+</br>
+<img width="1919" height="915" alt="home" src="https://github.com/user-attachments/assets/0f49da36-43dd-400e-bcc9-b917647450d4" />
+</br>
+<img width="1919" height="904" alt="home search" src="https://github.com/user-attachments/assets/c9fc4f2a-d838-446b-9843-ad6aa3cd2120" />
+</br>
 
-### ⚙️ Admin Dashboard
-*(Add screenshot)*
+
+### 🛒 Cart page with items
+</br>
+<img width="1919" height="902" alt="Cart" src="https://github.com/user-attachments/assets/dfa52cec-0a25-44a0-9ff7-f425281e3f1a" />
+</br>
+
+### 📦 Order History page
+
+</br>
+<img width="1919" height="796" alt="order history" src="https://github.com/user-attachments/assets/e602dd62-8ac7-4b5d-ac7a-837e96a6b104" />
+</br>
+<img width="1904" height="919" alt="order history transact" src="https://github.com/user-attachments/assets/9d4ac4b3-cb8c-4f46-b601-9f5ab5640867" />
+</br>
+
+### ⚙️ Admin Dashboard with product CRUD
+</br>
+<img width="1919" height="923" alt="Admin dashboard" src="https://github.com/user-attachments/assets/64c660b7-0fdc-4ce4-b7e8-82beeb6c5474" />
+</br>
+<img width="1919" height="757" alt="Admin dashboard product add" src="https://github.com/user-attachments/assets/c3528f36-612f-4d61-8866-8e1ed12e2c0b" />
+</br>
+
+
 
 ### 📋 Eureka Dashboard
-*(Add screenshot)*
+</br>
+<img width="1919" height="903" alt="Eureka dashboard" src="https://github.com/user-attachments/assets/b729f770-7fcc-4824-b208-e79f49654cab" />
+
 
 ---
 
